@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{layouts/layout :: head('Dashboard')}">
+</head>
+
+<body>
+
+<header th:replace="~{fragments/header :: header}">
+</header>
+
+<main class="container">
+    <section class="panel">
+        <h1>Dashboard</h1>
+
+        <p>
+            Xin chào
+            <strong th:text="${currentUser.fullName}">
+                người dùng
+            </strong>.
+        </p>
+
+        <p>
+            Email:
+            <span th:text="${currentUser.email}">
+                email
+            </span>
+        </p>
+
+        <p>
+            Quyền:
+            <strong th:text="${currentUser.roleName}">
+                role
+            </strong>
+        </p>
+    </section>
+</main>
+
+</body>
+</html>
